@@ -10,5 +10,5 @@
   yum:
     name: "erlang{{ erlang_series_rpm_version | ternary ('-' + (erlang_series_rpm_version | string),'') }}"
     state: present
-    disablerepo: "*"
+    disablerepo: "base,epel,openlogic,extras,updates"
     enablerepo: "rabbitmq_erlang"
